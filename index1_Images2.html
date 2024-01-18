@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', serif;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+            font-size: 1.5em;
+        }
+
+        .portfolio-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .resume-card {
+            width: 300px;
+            height: 400px;
+            margin: 20px;
+            perspective: 1000px;
+        }
+
+        .card-inner {
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            transition: transform 0.5s;
+        }
+
+        .resume-card:hover .card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .card-face {
+            position: absolute;
+            width: 100%;
+            height: 120%;
+            backface-visibility: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-face.front {
+            background-color: #fff;
+        }
+
+        .card-face.back {
+            background-color: #f5f5f5;
+            transform: rotateY(180deg);
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        p {
+            color: #555;
+        }
+
+        .resume-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Portfolio</h1>
+    </header>
+
+    <div class="portfolio-container">
+        <!-- Resume 1 -->
+        <div class="resume-card">
+            <div class="card-inner">
+                <div class="card-face front">
+                    <img class="resume-image" src="https://www.instagram.com/p/Cdq2vUBpMXx8Cb_PfIQhocFvJI_zu0oX5SjrL00/" alt="Resume Image">
+                    <h2>Divyansh Rana</h2>
+                    <p>Web Developer</p>
+                    <p>1 year</p>
+                </div>
+                <div class="card-face back">
+                    <!-- Back content, you can add more details here -->
+                    <p>Divyansh Rana is a recent Computer Science graduate with a passion for front-end development. His portfolio includes projects showcasing her proficiency in HTML, CSS, and JavaScript. She has interned at a tech startup, 
+                        where he played a key role in redesigning the company website, resulting in a 30% increase in user engagement.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Resume 2 -->
+        <div class="resume-card">
+            <div class="card-inner">
+                <div class="card-face front">
+                    <img class="resume-image" src="https://media.licdn.com/dms/image/D4D03AQEqWwRp-yhwPQ/profile-displayphoto-shrink_400_400/0/1668876083194?e=1710979200&v=beta&t=GLxubutLBEINsblGu-TUZ9seOsPwC9yy1KmsZiQkKRc" alt="Resume Image">
+                    <h2>Kaustubh Srivastava</h2>
+                    <p>Data Scientist</p>
+                    <p>1 year</p>
+                </div>
+                <div class="card-face back">
+                    <!-- Back content, you can add more details here -->
+                    <p>Kaustubh Srivastava is a data scientist specializing in predictive analytics. With a Master's in Data Science, Miguel has successfully applied machine learning models to financial data, leading to improved risk assessment strategies. His work contributed to a 15% reduction in investment portfolio volatility for his previous employer.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add more resumes as needed -->
+        <!-- Resume 3 -->
+        <div class="resume-card">
+            <div class="card-inner">
+                <div class="card-face front">
+                    <img class="resume-image" src="https://media.licdn.com/dms/image/D4D35AQFPRp-Q_1rM7Q/profile-framedphoto-shrink_400_400/0/1689919485154?e=1705899600&v=beta&t=nrjpDEhgbua5R0nnp_HV2iCnkxoBsvdWtLP8yQL79E0" alt="Resume Image">
+                    <h2>Mehul Wadhwa</h2>
+                    <p>Software Engineer</p>
+                    <p>1 year</p>
+                </div>
+                <div class="card-face back">
+                    <!-- Back content, you can add more details here -->
+                    <p>Mehul is a software engineer specializing in artificial intelligence. His portfolio showcases projects related to natural language processing and machine learning. During his academic tenure, Mehul collaborated on a research project that involved developing a sentiment analysis model for social media data, leading to a published paper in a reputable conference.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Resume 4 -->
+        <div class="resume-card">
+            <div class="card-inner">
+                <div class="card-face front">
+                    <img class="resume-image" src="https://media.licdn.com/dms/image/D5635AQGILPLSK2xsIw/profile-framedphoto-shrink_400_400/0/1704611312841?e=1705899600&v=beta&t=h9of9tkhX_Dz3Peel60pd3JDG0-YaQF3garyIlRHyNA" alt="Resume Image">
+                    <h2>Kushal Pandey</h2>
+                    <p>Data Scientist</p>
+                    <p>1 year</p>
+                </div>
+                <div class="card-face back">
+                    <!-- Back content, you can add more details here -->
+                    <p>Kushal Pandey is a data science enthusiast with a Bachelor's degree in Machine Learning. His portfolio features projects where he applied machine learning algorithms to solve real-world problems. During an internship at a healthcare analytics company, Kushal developed a predictive model that improved patient outcome predictions by 20%.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Resume 5 -->
+        <div class="resume-card">
+            <div class="card-inner">
+                <div class="card-face front">
+                    <img class="resume-image" src="https://media.licdn.com/dms/image/D5635AQFYsRYzktug2w/profile-framedphoto-shrink_400_400/0/1705133883378?e=1705899600&v=beta&t=-EsmzMJBXS3OmRW4mwxAfPHIa9hQY1_umbzFu_T_1wQ" alt="Resume Image">
+                    <h2>Nishtha</h2>
+                    <p>Cybersecurity Analyst</p>
+                    <p>1 year</p>
+                </div>
+                <div class="card-face back">
+                    <!-- Back content, you can add more details here -->
+                    <p>Nishtha is a cybersecurity graduate with a focus on ethical hacking. Her portfolio showcases her skills in penetration testing and vulnerability assessment. Nishtha completed a cybersecurity internship where she successfully identified and patched critical vulnerabilities in the company's network infrastructure, enhancing overall security.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // You can add JavaScript code for additional interactivity or transitions here
+    </script>
+
+</body>
+
+</html>
